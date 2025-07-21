@@ -1,2 +1,14 @@
 # Portfolio
-A small and simple portfolio site built with just HTML, CSS And Javascript. Just enough to get across who I am and what I do.
+---
+
+# About
+A small and simple portfolio website to showcase what makes me myself and the things I have achieved.
+
+This site will be self hosted using an apache2 webserver and a custom domain name.
+
+# Technoloigies
+- HTML
+- CSS (Utalising Bootstrap 5)
+- JavaScript
+
+  
