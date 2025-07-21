@@ -1,3 +1,8 @@
+// Saul Maylin
+// 22/07/2025
+// v1
+// Footer HTML.
+
 export function setFooter() {
   // get footer element
   const footer = document.getElementsByClassName("footer")[0];

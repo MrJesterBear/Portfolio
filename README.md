@@ -11,4 +11,5 @@ This site will be self hosted using an apache2 webserver and a custom domain nam
 - CSS (Utalising Bootstrap 5)
 - JavaScript
 
-  
+# Last Update
+00:35 22/07/2025

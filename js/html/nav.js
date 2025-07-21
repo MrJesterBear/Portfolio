@@ -1,10 +1,9 @@
 // Saul Maylin
-// 18/06/2025
+// 22/07/2025
 // v1
-// Javascript HTML.
+// Nav HTML.
 
 // Navbar Function.
-// import { checkCookie, setCookie } from "../util/cookies.js";
 
 export function setNav() {
   // get nav element
