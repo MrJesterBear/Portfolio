@@ -1,15 +1,18 @@
 // Saul Maylin
-// 22/07/2025
-// v1
+// 23/07/2025
+// v1.1
 // Event Handlers for Navigation.
 
 // Determine what section is loaded.
 let currentSection = "ABOUT";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ! About Button
+  // buttons
   const about = document.getElementById("aboutButton");
+  const education = document.getElementById("educationButton");
+  const projects = document.getElementById("projectsButton");
 
+  // ! About Button
   about.addEventListener("click", () => {
     // Check what section is currently loaded.
 
@@ -23,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("education").innerHTML = "";
         setAbout();
         currentSection = "ABOUT";
+        configButton(education, about);
         break;
 
       case "PROJECTS":
@@ -30,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("projects").innerHTML = "";
         setAbout();
         currentSection = "ABOUT";
+        configButton(projects, about);
         break;
 
       default:
@@ -39,8 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ! Education Button
-  const education = document.getElementById("educationButton");
-
   education.addEventListener("click", () => {
     // Check what section is currently loaded.
 
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("about").innerHTML = "";
         setEducation();
         currentSection = "EDUCATION";
+        configButton(about, education);
         break;
 
       case "EDUCATION":
@@ -61,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("projects").innerHTML = "";
         setEducation();
         currentSection = "EDUCATION";
+        configButton(projects, education);
         break;
 
       default:
@@ -70,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ! Projects Button
-  const projects = document.getElementById("projectsButton");
 
   projects.addEventListener("click", () => {
     // Check what section is currently loaded.
@@ -81,6 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("about").innerHTML = "";
         setProjects();
         currentSection = "PROJECTS";
+        configButton(about, projects);
         break;
 
       case "EDUCATION":
@@ -88,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("education").innerHTML = "";
         setProjects();
         currentSection = "PROJECTS";
+        configButton(education, projects);
         break;
 
       case "PROJECTS":
@@ -100,3 +106,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// Enables / Disables Buttons
+function configButton(oldSection, newSection) {
+        // Toggle the new section to be active and disabled.
+        newSection.classList.toggle("active");
+        newSection.classList.toggle("disabled");
+
+        // Toggle the old section to be inactive and enabled.
+        oldSection.classList.toggle("active");
+        oldSection.classList.toggle("disabled");
+
+}

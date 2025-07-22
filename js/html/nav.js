@@ -22,7 +22,7 @@ export function setNav() {
 
     // About
     '<li class="nav-item px-5">' +
-    '<a class="nav-link border" id = "aboutButton" href="#about">About</a>' +
+    '<a class="nav-link active disabled border" id = "aboutButton" href="#about">About</a>' +
     "</li>" +
 
     // Education

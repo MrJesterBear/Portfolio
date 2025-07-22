@@ -1,6 +1,6 @@
 // Saul Maylin
 // 22/07/2025
-// v1
+// v1.1
 // Footer HTML.
 
 export function setFooter() {
@@ -19,9 +19,9 @@ export function setFooter() {
     "<a href='#top' class='text-white'>Back to top</a>" +
     "</div>" +
     // Github
-    "<a class='text-white' href='https://github.com/MrJesterBear'><img src='./assets/logos/github.png' alt='Github Logo' width='30' height='30'></a>" +
+    "<a class='text-white' target='_blank' rel='noopener noreferrer' href='https://github.com/MrJesterBear'><img src='./assets/logos/github.png' alt='Github Logo' width='30' height='30'></a>" +
     // LinkedIn
-    "<a class='text-white' href='https://www.linkedin.com/in/saulmaylin/'><img src='./assets/logos/linkedin.png' alt='LinkedIn Logo' width='30' height='30'></a>";
+    "<a class='text-white' target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/saulmaylin/'><img src='./assets/logos/linkedin.png' alt='LinkedIn Logo' width='30' height='30'></a>";
 
   footer.innerHTML = footerHTML;
 }
