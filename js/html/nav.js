@@ -22,17 +22,17 @@ export function setNav() {
 
     // About
     '<li class="nav-item px-5">' +
-    '<a class="nav-link border" href="#about">About</a>' +
+    '<a class="nav-link border" id = "aboutButton" href="#about">About</a>' +
     "</li>" +
 
     // Education
     '<li class="nav-item px-5">' +
-    '<a class="nav-link border" href="#education">Education</a>' +
+    '<a class="nav-link border" id = "educationButton" href="#education">Education</a>' +
     "</li>" +
 
     // Projects
     '<li class="nav-item px-5">' +
-    '<a class="nav-link border" href="#projects">Projects</a>' +
+    '<a class="nav-link border" id = "projectsButton" href="#projects">Projects</a>' +
     "</li>";
 
     // Extra Link
