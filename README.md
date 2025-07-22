@@ -12,4 +12,4 @@ This site will be self hosted using an apache2 webserver and a custom domain nam
 - JavaScript
 
 # Last Update
-00:35 22/07/2025
+00:22 23/07/2025
