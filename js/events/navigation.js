@@ -1,5 +1,3 @@
-// import setEducation  from "./js/html/sections.js";
-
 // Saul Maylin
 // 22/07/2025
 // v1
