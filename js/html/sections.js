@@ -21,7 +21,7 @@ function setAbout() {
                           <p> In my spare time, I like to work on personal projects and partake in hobbies which include: </p>
                 
                           <ul class="list-unstyled">
-                              <li>-> Maintaining a homelab environment/li>
+                              <li>-> Maintaining a homelab environment </li>
                               <li>-> Partaking in Dungeons & Dragons campaigns</li>
                               <li>-> Creating Software Dev based projects</li>
                               <li>-> Playing Video Games</li>
