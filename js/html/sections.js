@@ -47,7 +47,7 @@ function setEducation() {
   const container = document.getElementById("education");
 
   const educationHTML = `
-                <h1 class="text-center mt-3">This is a big test.</h1>
+                <h1 class="text-center mt-3">This section is currently incomplete.</h1>
             `;
 
   container.innerHTML = educationHTML;
@@ -57,7 +57,7 @@ function setProjects() {
   const container = document.getElementById("projects");
 
   const projectsHTML = `
-                <h1 class="text-center mt-3">This is a big test part 2.</h1>
+                <h1 class="text-center mt-3">This section is currently incomplete.</h1>
             `;
 
   container.innerHTML = projectsHTML;
