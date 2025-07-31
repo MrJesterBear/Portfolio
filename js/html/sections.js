@@ -13,7 +13,7 @@ function setAbout() {
                 <p class="text-center mt-3">I am an aspiring software developer based in the Scottish Highlands.</p>
                   <div class= "row py-4">
                       <div class="col-md-6">
-                          <p> I am currently studying BSc Computing (Software Engineering) at Inverness College UHI full time. </p>
+                          <p> I am currently studying BSc Computing (Software Engineering) at Inverness College UHI full time. Previously having completed a HND Computer Science with an A grade.</p>
                           <p> Through my time at College and University I have become very interested in software development in various aspects: Backend Web Development with PHP, Frontend Web Development with JavaScript and Bootstrap and Basic Applications using Java and C#. </p>
                       </div>
 
