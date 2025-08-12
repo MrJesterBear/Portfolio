@@ -57,7 +57,16 @@ function setProjects() {
   const container = document.getElementById("projects");
 
   const projectsHTML = `
-                <h1 class="text-center mt-3">This section is currently incomplete.</h1>
+                <h1 class="text-center mt-3">My Projects</h1>
+                <p class = "text-center">Here are some of the projects I've worked on:</p>
+
+                  <div class = "row py-4">
+                    <ul>
+                      <li><a href="#crawler">Project Crawler</a></li>
+                      <li><a href="#">Project 2</a></li>
+                      <li><a href="#">Project 3</a></li>
+                    </ul>
+                  </div>
             `;
 
   container.innerHTML = projectsHTML;
