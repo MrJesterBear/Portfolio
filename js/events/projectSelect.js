@@ -1,6 +1,6 @@
 // Saul Maylin
-// 12/08/2025
-// v1
+// 16/08/2025
+// v1.5
 // Section HTML for projects..
 
 class projectSelect {
@@ -14,18 +14,17 @@ class projectSelect {
 
   /**
    * Fetches the project HTML file based on the project name.
-   * @returns {html} The HTML content of the project.
+   * https://stackoverflow.com/questions/36631762/returning-html-with-fetch
    */
-  getProject() {
-    fetch("/assets/html/projects/" + this.project + ".html") // Selects project HTML file
-      .then(function (response) {
-        if (response.ok) {
-          // if a response is gotten, check it's okay and then return the file data.
-          return response.text;
-        }
-        throw response;
-      });
+
+async getProject() {
+  try {
+    let response = await fetch("assets/html/projects/" + this.project + ".html"); 
+    this.renderProject(await response.text())
+  } catch (error) {
+    console.log("Error fetching project HTML: ", error);
   }
+}
 
   /**
    * Renders the project data into the container.
