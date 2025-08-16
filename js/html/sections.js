@@ -1,6 +1,6 @@
 // Saul Maylin
-// 22/07/2025
-// v1.1
+// 16/08/2025
+// v1.5
 // Section HTML.
 
 function setAbout() {
@@ -36,7 +36,7 @@ function setAbout() {
                   </div>
                     
                   <div class="row py-4 text-center">
-                      <a class="btn btn-primary" target='_blank' rel='noopener noreferrer' href="./assets/docs/test_pdf.pdf" role="button">Download My CV!</a>
+                      <a class="btn btn-primary" target='_blank' rel='noopener noreferrer' href="./assets/docs/linkedin_profile.pdf" role="button">Download My CV!</a>
                   </div>
             `;
 
@@ -57,8 +57,42 @@ function setProjects() {
   const container = document.getElementById("projects");
 
   const projectsHTML = `
-                <h1 class="text-center mt-3">This section is currently incomplete.</h1>
-            `;
+                <h1 class="text-center mt-3">My Projects</h1>
+                <p class = "text-center">Here are some of the projects I've worked on:</p>
 
+                  <div class = "row py-4">
+                    <div class = "col-md-6 border border-border text-center">
+                      <p class = ""> Click on a project to view its details:</p>
+                      <ul class = "list-unstyled">
+                        <li><a class = "projectButton" href="#crawler">Project Crawler</a></li>
+                      </ul>
+                    </div>
+
+                    <div class = "col-md-6 border border-border" id = "project-area">
+
+                    </div>
+                  </div>
+            `;
   container.innerHTML = projectsHTML;
+
+  // Instantiate project class.
+  let projectChoice = new projectSelect("Temp");
+
+  // Add Event Listeners to the buttons.
+  const projectButtons = document.querySelectorAll(".projectButton");
+
+  // Loops through each project button and adds a click event listener.
+  projectButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      console.log("button pressed");
+
+      // set the project name based on href of button.
+      let projectName = button.getAttribute("href").substring(1);
+
+      projectChoice = new projectSelect(projectName);
+      projectChoice.getProject();
+    });
+
+  });
+
 }

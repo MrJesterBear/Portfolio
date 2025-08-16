@@ -12,6 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const education = document.getElementById("educationButton");
   const projects = document.getElementById("projectsButton");
 
+  // sections
+  const aboutSection = document.getElementById("about");
+  const educationSection = document.getElementById("education");
+  const projectsSection = document.getElementById("projects");
+
   // ! About Button
   about.addEventListener("click", () => {
     // Check what section is currently loaded.
@@ -23,18 +28,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
       case "EDUCATION":
         // If the section is education, set the about section and destroy old content.
-        document.getElementById("education").innerHTML = "";
+        educationSection.innerHTML = "";
         setAbout();
         currentSection = "ABOUT";
         configButton(education, about);
+        configSections(educationSection, aboutSection);
         break;
 
       case "PROJECTS":
         // If the section is projects, set the about section and destroy old content.
-        document.getElementById("projects").innerHTML = "";
+        projectsSection.innerHTML = "";
         setAbout();
         currentSection = "ABOUT";
         configButton(projects, about);
+        configSections(projectsSection, aboutSection);
         break;
 
       default:
@@ -50,10 +57,11 @@ document.addEventListener("DOMContentLoaded", () => {
     switch (currentSection) {
       case "ABOUT":
         // If the section is about, set the about section and destroy old content.
-        document.getElementById("about").innerHTML = "";
+        aboutSection.innerHTML = "";
         setEducation();
         currentSection = "EDUCATION";
         configButton(about, education);
+        configSections(aboutSection, educationSection);
         break;
 
       case "EDUCATION":
@@ -62,10 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       case "PROJECTS":
         // If the section is projects, set the about section and destroy old content.
-        document.getElementById("projects").innerHTML = "";
+        projectsSection.innerHTML = "";
         setEducation();
         currentSection = "EDUCATION";
         configButton(projects, education);
+        configSections(projectsSection, educationSection);
         break;
 
       default:
@@ -82,18 +91,20 @@ document.addEventListener("DOMContentLoaded", () => {
     switch (currentSection) {
       case "ABOUT":
         // If the section is about, set the about section and destroy old content.
-        document.getElementById("about").innerHTML = "";
+        aboutSection.innerHTML = "";
         setProjects();
         currentSection = "PROJECTS";
         configButton(about, projects);
+        configSections(aboutSection, projectsSection);
         break;
 
       case "EDUCATION":
         // If the section is education, set the about section and destroy old content.
-        document.getElementById("education").innerHTML = "";
+        educationSection.innerHTML = "";
         setProjects();
         currentSection = "PROJECTS";
         configButton(education, projects);
+        configSections(educationSection, projectsSection);
         break;
 
       case "PROJECTS":
@@ -107,14 +118,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Enables / Disables Buttons
-function configButton(oldSection, newSection) {
-        // Toggle the new section to be active and disabled.
-        newSection.classList.toggle("active");
-        newSection.classList.toggle("disabled");
+/**
+ * Configures the buttons for the active/inactive state.
+ * @param {HTMLElement} oldButton Button that is no longer active
+ * @param {HTMLElement} newButton Button that is currently active
+ */
+function configButton(oldButton, newButton) {
+  // Toggle the new section to be active and disabled.
+  newButton.classList.toggle("active");
+  newButton.classList.toggle("disabled");
 
-        // Toggle the old section to be inactive and enabled.
-        oldSection.classList.toggle("active");
-        oldSection.classList.toggle("disabled");
+  // Toggle the old section to be inactive and enabled.
+  oldButton.classList.toggle("active");
+  oldButton.classList.toggle("disabled");
+}
 
+/**
+ * Configures the border of the sections to fix a styling issue.
+ * @param {HTMLElement} oldSection Section that is no longer being used
+ * @param {HTMLElement} newSection Section that is currently being used
+ */
+function configSections(oldSection, newSection) {
+  oldSection.classList.toggle("border");
+  newSection.classList.toggle("border");
 }
