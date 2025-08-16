@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: /assets
+Disallow: /assets/docs
+Disallow: /assets/html
