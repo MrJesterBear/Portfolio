@@ -1,3 +1,5 @@
+Sitemap: https://www.saulmaylin.com/sitemap.xml
+
 User-agent: *
 Disallow: /assets/docs
 Disallow: /assets/html
